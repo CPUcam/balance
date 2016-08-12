@@ -1,0 +1,36 @@
+extends ../layout
+
+block content
+  .page-header
+    h3.center Group
+  form(method='POST')
+    input(type='hidden', name='_csrf', value=_csrf)
+    .group
+        input(type='groupName', name='groupName', id='groupName', placeholder='', autofocus, required)
+        span.highlight
+        span.bar
+        label.labels Group Name
+    .group
+        input(type='one', name='one', id='one', placeholder='', required)
+        span.highlight
+        span.bar
+        label.labels First Person Email
+    .group
+        input(type='two', name='two', id='two', placeholder='', required)
+        span.highlight
+        span.bar
+        label.labels Email
+    .group
+        input(type='three', name='three', id='three', placeholder='', required)
+        span.highlight
+        span.bar
+        label.labels Email
+    .group
+        input(type='four', name='four', id='four', placeholder='', required)
+        span.highlight
+        span.bar
+        label.labels Email
+    .form-group
+      button.btn.btn-primary(type='submit')
+        i.fa.fa-key
+        | Create Group

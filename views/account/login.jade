@@ -1,0 +1,37 @@
+extends ../layout
+
+block content
+  .page-header
+    h3.center Sign in
+  form(method='POST')
+    input(type='hidden', name='_csrf', value=_csrf)
+    .group
+        input(type='name', name='name', id='name', placeholder='', autofocus, required)
+        span.highlight
+        span.bar
+        label.labels Name
+    .group
+        input(type='email', name='email', id='email', placeholder='', required)
+        span.highlight
+        span.bar
+        label.labels Email
+    .group
+        input(type='password', name='password', id='password', placeholder='', required)
+        span.highlight
+        span.bar
+        label.labels Password
+    .group
+        button.button.buttonBlue(type='submit')
+          | Login
+        a.btn.btn-link(href='/forgot') Forgot your password?
+    .form-group
+      .col-sm-offset-3.col-sm-7
+        hr
+    .form-group
+      .col-sm-offset-3.col-sm-7
+        a.btn.btn-block.btn-facebook.btn-social(href='/auth/facebook')
+          i.fa.fa-facebook
+          | Sign in with Facebook
+        a.btn.btn-block.btn-google.btn-social(href='/auth/google')
+          i.fa.fa-google-plus
+          | Sign in with Google
