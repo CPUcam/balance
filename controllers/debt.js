@@ -38,6 +38,19 @@ exports.getGroup = (req, res) => {
   });
 };
 
+/*
+* GET /stream
+* Debt page
+*/
+exports.getStream = (req, res) => {
+  if (!req.user) {
+    return res.redirect('/');
+  }
+  res.render('account/stream', {
+    title: 'Stream'
+  });
+};
+
 /**
 * POST /group
 * Create new group

@@ -22,7 +22,7 @@ const upload = multer({ dest: path.join(__dirname, 'uploads') });
 /**
  * Load environment variables from .env file, where API keys and passwords are configured.
  */
-dotenv.load({ path: '.env.example' });
+dotenv.load({ path: '.env' });
 
 /**
  * Controllers (route handlers).
@@ -131,6 +131,7 @@ app.post('/debt/add', passportConfig.isAuthenticated, debtController.postAddFrie
 app.post('/debt/new', passportConfig.isAuthenticated, debtController.postAddDebt);
 app.get('/group', passportConfig.isAuthenticated, debtController.getGroup);
 app.post('/group', passportConfig.isAuthenticated, debtController.postNewGroup);
+app.get('/stream', passportConfig.isAuthenticated, debtController.getStream);
 
 /**
  * OAuth authentication routes. (Sign in)
