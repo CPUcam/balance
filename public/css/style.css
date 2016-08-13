@@ -26,6 +26,14 @@ form {
 	box-shadow: rgba(0,0,0,0.14902) 0px 1px 1px 0px,rgba(0,0,0,0.09804) 0px 1px 2px 0px;
 }
 
+.center {
+	text-align: center;
+	background: #00796b;
+	color: white;
+	margin-top: -50px;
+	line-height: 1.5;
+}
+
 .material-div {
 	width: 380px;
 	margin: 4em auto;
@@ -164,6 +172,10 @@ form {
 
 .hidden {
 	display: none;
+}
+
+.login {
+	border: 1px, black;
 }
 
 input {

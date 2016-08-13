@@ -3551,7 +3551,10 @@ tbody.collapse.in {
     .nav > li > a {
       position: relative;
       display: block;
-      padding: 10px 15px; }
+      padding: 15px 10px;
+      border: 1px solid #00796b;
+      background: #00796b;
+      border-radius: 4px; }
       .nav > li > a:hover, .nav > li > a:focus {
         text-decoration: none;
         background-color: #eeeeee; }
@@ -3675,9 +3678,9 @@ tbody.collapse.in {
 .navbar-header:after {
   clear: both; }
 
-@media (min-width: 768px) {
+/*@media (min-width: 768px) {*/
   .navbar-header {
-    float: left; } }
+    float: left; }
 
 .navbar-collapse {
   overflow-x: visible;
@@ -3804,8 +3807,8 @@ tbody.collapse.in {
   .navbar-nav > li > a {
     padding-top: 10px;
     padding-bottom: 10px;
-    line-height: 20px; }
-  @media (max-width: 767px) {
+    line-height: 1px; }
+  /*@media (max-width: 767px) {
     .navbar-nav .open .dropdown-menu {
       position: static;
       float: none;
@@ -3820,16 +3823,19 @@ tbody.collapse.in {
       .navbar-nav .open .dropdown-menu > li > a {
         line-height: 20px; }
         .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-nav .open .dropdown-menu > li > a:focus {
-          background-image: none; } }
-  @media (min-width: 768px) {
+          background-image: none; } }*/
+  /*@media (min-width: 768px) {*/
     .navbar-nav {
       float: left;
       margin: 0; }
       .navbar-nav > li {
         float: left; }
         .navbar-nav > li > a {
-          padding-top: 15px;
-          padding-bottom: 15px; } }
+          padding-top: 7px;
+          padding-bottom: 7px;
+          margin-top: 18px;
+          margin-right: 0px;
+          margin-left: 25px;}
 
 .navbar-form {
   margin-left: -15px;
@@ -8787,6 +8793,7 @@ button.close {
   .navbar-default .navbar-nav > li > a {
     font-size: 12px;
     font-weight: 500;
+    color: white;
     text-transform: uppercase;
     transition: all 0.2s linear; }
 
