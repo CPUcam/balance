@@ -197,6 +197,13 @@ exports.postAddDebt = (req, res) => {
   streamAmount = req.body.amount;
   streamMessage = req.body.message;
 
+  console.log(parseFloat(streamAmount));
+  if (!(!isNaN(parseFloat(streamAmount)) && isFinite(streamAmount)) || (parseFloat(streamAmount) < 0)) {
+    console.log(parseFloat(streamAmount));
+    req.flash('errors', { msg: 'Please enter a valid, non negative amount.' });
+    return res.redirect('/debt');
+  }
+
   User.findById(req.user.id, (err, user) => {
     if (err) { return next(err); }
 

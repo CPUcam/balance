@@ -3,8 +3,9 @@ extends ../layout
 block content
   .page-header
     h3.center Stream
-  - for(var x = 0; x < user.stream.length; x++)
-    .group-section
-      p= user.stream[x].friend
-      p= user.stream[x].amount
-      p= user.stream[x].message
+    .material-div
+      - for(var x = 0; x < user.stream.length; x++)
+        .section
+          .group-section
+            p #{user.stream[x].friend} owes you $#{user.stream[x].amount}
+            p= user.stream[x].message

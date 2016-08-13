@@ -28,13 +28,13 @@ block content
       input(type='hidden', name='_csrf', value=_csrf)
       button.section(type='submit')
         | Add
-
-  - for (var x = 0; x < user.friendsList.length; x++)
-    .group-section
-      p= user.friendsList[x].name
-      p= user.friendsList[x].debt
-      if user.friendsList[x].picture
-        img(src='#{user.friendsList[x].picture}')
+  .material-div
+    - for (var x = 0; x < user.friendsList.length; x++)
+      .group-section
+        p= user.friendsList[x].name
+        p= user.friendsList[x].debt
+        if user.friendsList[x].picture
+          img(src='#{user.friendsList[x].picture}')
         //  ul.dropdown-debt
             li
               input(name='h', value= j)
